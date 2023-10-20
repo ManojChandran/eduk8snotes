@@ -127,3 +127,6 @@ spec:
     ports:
     - containerPort: 80
 ```
+
+## Conclusion
+We converd the basic and learned the core concepts related to kubernetes.
