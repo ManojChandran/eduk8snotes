@@ -1,5 +1,5 @@
 # Introduction
-We are trying to learn kubernetes by asking question and answering them.
+We are trying to learn kubernetes basics in this chapter, we learn by asking question and answering them.
 
 ### What is a kubernetes?
 Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
