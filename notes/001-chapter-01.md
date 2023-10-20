@@ -51,7 +51,7 @@ Entire kubernetes working depends on or modeled around 8 kubernetes kind offered
 ### How can we create object in Kubernetes?
 The kubectl command-line tool supports several different ways to create and manage Kubernetes objects.
 
-### HHow does kubernetes achive the orchestration?
+### How does kubernetes achive the orchestration?
 An application state is requested as an object to kubernetes using API, Kubernetes recieves the request and maintain the state in a cluster. It is a Master and Worker node architecture, control plane act as a master and corresponding nodes act as workers with pods in it. <br />
 
 <img src="../images/Kubernetes_cluster_architecture.png"  width="60%" height="30%">
