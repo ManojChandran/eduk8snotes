@@ -4,8 +4,8 @@ We are trying to learn kubernetes by asking question and answering them.
 ### What is a kubernetes?
 Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
 
-### How does kubernetes achive the orchestration?
-Kubernetes ask us what state you we want and continuously work on maintaining the request state. 
+### What is the kubernetes core working principle to achive the orchestration?
+Kubernetes ask us what state you we want, realize these request as an `object` state and kubernetes continuously work on maintaining the request state. 
 
 ### How we request or tell, what state we want?
 We write kubernetes API, we express our request in .yaml format.
