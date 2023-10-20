@@ -48,13 +48,13 @@ Kubernetes creates `objects`, Kubernetes objects are persistent entities in the 
 ### Why kubernetes are called k8's?
 Entire kubernetes working depends on or modeled around 8 kubernetes kind offered. 
 
-### How can we create object in Kubernetes?
-The kubectl command-line tool supports several different ways to create and manage Kubernetes objects.
-
 ### How does kubernetes achive the orchestration?
 An application state is requested as an object to kubernetes using API, Kubernetes recieves the request and maintain the state in a cluster. It is a Master and Worker node architecture, control plane act as a master and corresponding nodes act as workers with pods in it. <br />
 
 <img src="../images/Kubernetes_cluster_architecture.png"  width="60%" height="30%">
+
+### How can we create object in Kubernetes?
+The kubectl command-line tool supports several different ways to create and manage Kubernetes objects.
 
 ### How these Objects are identified?
 Each object in your cluster has a Name that is unique for that type of resource. Every Kubernetes object also has a UID that is unique across your whole cluster. (eg name: nginx-demo )
