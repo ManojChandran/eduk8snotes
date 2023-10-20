@@ -48,7 +48,7 @@ Kubernetes creates `objects`, Kubernetes objects are persistent entities in the 
 ### Why kubernetes are called k8's?
 Entire kubernetes working depends on or modeled around 8 kubernetes kind offered. 
 
-### How can we create object in Kubernetes?
+### How does kubernetes achive the orchestration?
 The kubectl command-line tool supports several different ways to create and manage Kubernetes objects.
 
 ### How does kubernetes maintain the object state requested?
