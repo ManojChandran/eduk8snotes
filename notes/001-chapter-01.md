@@ -53,8 +53,45 @@ An application state is requested as an object to kubernetes using API, Kubernet
 
 <img src="../images/Kubernetes_cluster_architecture.png"  width="60%" height="30%">
 
+### What are the major components of kubernetes?
+Kubernetes components are classified as Control plane compoanents and Node components.
+
+Control plane components consists of 
+* kube-apiserver
+* etcd
+* kube-scheduler
+* kube-controller-manager
+* cloud-controller-manager
+
+Node Components consist of 
+* kubelet
+* kube-proxy
+* Container runtime
+
+### What are Addons in kubernetes?
+Add-ons extend the functionality of Kubernetes. Special listed Addons nare
+
+* DNS
+* Web UI (Dashboard)
+* Container Resource Monitoring
+* Cluster-level Logging
+* Network Plugins
+
 ### How can we create object in Kubernetes?
 The kubectl command-line tool supports several different ways to create and manage Kubernetes objects.
+
+### Where are these objects stored?
+Kubernetes stores the serialized state of objects by writing them into `etcd`.
+
+### What is an etcd?
+`etcd` is an open source distributed key-value store used to hold and manage the critical information that distributed systems need to keep running. 
+* Replicated 
+* Consistent
+* Highly available
+* Fast
+* Secure
+
+Kubernetes `etcd` stores state data, configuration data and meta data. `etcd` has a wait frunction which continiously monitor config and state, will notify kubernetes when there is a difference.
 
 ### How these Objects are identified?
 Each object in your cluster has a Name that is unique for that type of resource. Every Kubernetes object also has a UID that is unique across your whole cluster. (eg name: nginx-demo )
