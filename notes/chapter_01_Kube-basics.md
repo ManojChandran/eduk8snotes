@@ -129,4 +129,4 @@ spec:
 ```
 
 ## Conclusion
-We converd the basic and learned the core concepts related to kubernetes.
+We learned about the basics and core concepts related to kubernetes.
