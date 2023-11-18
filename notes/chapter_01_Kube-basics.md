@@ -8,7 +8,7 @@ Kubernetes is an open source container orchestration engine for automating deplo
 Kubernetes ask us what state you we want, realize these request as an `object` state and kubernetes continuously work on maintaining the request state. 
 
 ### How we request or tell, what state we want?
-We write kubernetes API, we express our request in .yaml format.
+We write kubernetes API (record of intent), we express our request in .yaml format.
 
 ```yaml
 apiVersion: apps/v1
@@ -78,7 +78,10 @@ Add-ons extend the functionality of Kubernetes. Special listed Addons nare
 * Network Plugins
 
 ### How can we create object in Kubernetes?
-The kubectl command-line tool supports several different ways to create and manage Kubernetes objects.
+We can request object creation in three ways 
+* API                         
+* kubectl 
+* GUI
 
 ### Where are these objects stored?
 Kubernetes stores the serialized state of objects by writing them into `etcd`.
