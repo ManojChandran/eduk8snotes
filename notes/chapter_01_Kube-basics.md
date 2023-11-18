@@ -7,7 +7,16 @@ Kubernetes is an open source container orchestration engine for automating deplo
 ### What is the kubernetes core working principle to achive the orchestration?
 Kubernetes ask us what state you we want, realize these request as an `object` state and kubernetes continuously work on maintaining the request state. 
 
-### How we request or tell, what state we want?
+### How Kubernetes understand what we want?
+Kubernetes understand what we want by the objects we created.
+
+### How can we create object in Kubernetes?
+We can request object creation in three ways 
+* API                         
+* kubectl 
+* GUI
+
+## Give an example for API request?
 We write kubernetes API (record of intent), we express our request in .yaml format.
 
 ```yaml
@@ -77,12 +86,6 @@ Add-ons extend the functionality of Kubernetes. Special listed Addons nare
 * Cluster-level Logging
 * Network Plugins
 
-### How can we create object in Kubernetes?
-We can request object creation in three ways 
-* API                         
-* kubectl 
-* GUI
-
 ### Where are these objects stored?
 Kubernetes stores the serialized state of objects by writing them into `etcd`.
 
@@ -132,4 +135,4 @@ spec:
 ```
 
 ## Conclusion
-We learned about the basics and core concepts related to kubernetes.
+We understood basic building block of kubernetes `objects` and learned about the components of kubernetes.
