@@ -4,11 +4,15 @@ We are trying to learn kubernetes basics in this chapter, we learn by asking que
 ### What is a kubernetes?
 Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
 
-### What is the kubernetes core working principle to achive the orchestration?
-Kubernetes ask us what state you we want, realize these request as an `object` state and kubernetes continuously work on maintaining the request state. 
+## How Kubernetes work?
+Kubernetes ask us what state you we want and heart of the kubernetes is a fleet of controllers. Kubernetes controller is a control loop that watches the state of our cluster, then make changes to move the `current state` closer to the `desired state`.
 
 ### How Kubernetes understand what we want?
 Kubernetes understand what we want by the objects we created.
+
+### How controllers maintains the desired state?
+Kubernetes realize our request as an `object` state and kubernetes continuously work on maintaining the request state. Each object has a object `spec` (describes desired state) and `status` (describes current state)
+
 
 ### How can we create object in Kubernetes?
 We can request object creation in three ways 
