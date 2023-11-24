@@ -17,4 +17,5 @@ Custom resouce objects are created by creating an object from a Custom Resource 
 A CRD stands for Custom Resource Definition, its a file that let us define our own object kinds and lets the API Server handle the entire lifecycle.
 
 # References
-[Write Kubernetes from Scratch](https://www.youtube.com/watch?v=LLVoyXjYlYM) </br>
+[Operator hub](https://operatorhub.io/) </br>
+[Write Kubernetes operator from Scratch](https://www.youtube.com/watch?v=LLVoyXjYlYM) </br>
