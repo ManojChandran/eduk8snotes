@@ -7,8 +7,10 @@ Kubernetes is an open source container orchestration engine for automating deplo
 ## How Kubernetes work?
 Kubernetes ask us what state you we want and heart of the kubernetes is a fleet of controllers. Kubernetes controller is a control loop that watches the state of our cluster, then make changes to move the `current state` closer to the `desired state`.
 
+<img src="../images/control_loop.png"  width="60%" height="30%"> 
+
 ### How Kubernetes understand what we want?
-Kubernetes understand what we want by the objects we created.
+Kubernetes understand what we want by the `objects` we created.
 
 ### How controllers maintains the desired state?
 Kubernetes realize our request as an `object` state and kubernetes continuously work on maintaining the request state. Each object has a object `spec` (describes desired state) and `status` (describes current state).
