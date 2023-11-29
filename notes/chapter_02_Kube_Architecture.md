@@ -1,5 +1,5 @@
 # Introduction 
-Last chapter we gone through the kubernetes basics, now time to deep dive kubernets architecture.
+Last chapter we gone through the kubernetes basics, now time to deep dive kubernets does this for us.
 
 ### Where does the kubernets run the container?
 Containers are run in POD's.
