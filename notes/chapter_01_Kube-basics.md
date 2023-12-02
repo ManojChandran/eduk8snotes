@@ -16,7 +16,7 @@ Kubernetes understand what we want by the `objects` we created.
 Kubernetes realize our request as an `object` state and kubernetes continuously work on maintaining the request state. Each object has a object `spec` (describes desired state) and `status` (describes current state).
 
 ### How can we create object in Kubernetes?
-We can request object creation in three ways 
+A Kubernetes understand our requirement from Manifest file. Manifest file is a YAML or JSON file that describes the desired state of a Kubernetes object. We can request object creation in three ways 
 * API                         
 * kubectl 
 * GUI
