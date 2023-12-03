@@ -54,7 +54,7 @@ Kubernetes creates `objects`, Kubernetes objects are persistent entities in the 
 2. Replica Sets
 3. Services
 4. Volumes
-5. Name Spaces
+5. Namespaces
 6. ConfigMaps and Secrets
 7. Stateful Sets
 8. Daemon Sets
