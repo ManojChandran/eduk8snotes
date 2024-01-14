@@ -37,4 +37,3 @@ Kubelet is in charge of executing pod requirements, managing resources, and guar
 A cluster is a set of nodes (physical or virtual machines) running Kubernetes agents, managed by the control plane.
 
 <img src="../images/Kubernetes_cluster_block.png"  width="60%" height="30%"> 
-
