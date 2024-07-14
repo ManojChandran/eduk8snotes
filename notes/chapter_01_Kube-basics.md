@@ -1,5 +1,5 @@
 # Introduction
-We are trying to learn kubernetes basics in this chapter, we learn by asking question and answering them.
+This chapter is an introduction to kubernetes and we understand the basics of Kubernets. We are try to understand kubernetes basics, by asking question and answering them.
 
 ### What is a kubernentes?
 Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
@@ -160,6 +160,11 @@ Objects are used to create the resources of desired state for running applicatio
 ### What are applications running in kubernetes called?
 Applications running in kubernetes are called workloads.
 
-### How can we isolate workloads running in Kubernetes cluster?
-`namespaces` provide a mechanism for isolating groups of resources within a single cluster. 
- 
+### How Kubernetes isolates Kubernetes process with applicaton process?
+Kubernetes uses `namespaces` provide a mechanism for isolating Kubernetes process with applicaton process. The `namespaces` provide a mechanism for isolating groups of resources within a cluster. Kubernetes creates below namespaces for the Kubernets operations
+* default                       
+* kube-public            
+* kube-system            
+
+## Conclusion
+We coverd the basics of kubernetes and major components of kubernetes.
