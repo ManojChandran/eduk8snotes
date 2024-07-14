@@ -154,6 +154,12 @@ spec:
     - containerPort: 80
 ```
 
-### How can we isolate applicaton running in Kubernetes cluster?
-`namespaces` provide a mechanism for isolating groups of resources within a single cluster.
+### What are these kubernetes Objects used for?
+Objects are used to create the resources of desired state for running application in kubernetes. Resources are the fundemental building blocks of kubernentes, and they describe the various entities that make up a kubernetes application and infrastructure.
+
+### What are applications running in kubernetes called?
+Applications running in kubernetes are called workloads.
+
+### How can we isolate workloads running in Kubernetes cluster?
+`namespaces` provide a mechanism for isolating groups of resources within a single cluster. 
  
