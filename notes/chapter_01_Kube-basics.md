@@ -23,7 +23,6 @@ A Kubernetes cluster is a set of nodes that run containerized applications manag
 <img src="../images/Kubernetes_cluster_architecture.png"  width="60%" height="30%">
 
 ### What are the major components of Kubernetes cluster?
-
 Kubernetes components are classified as Control plane compoanents and Node components.
 
 Control plane components consists of
@@ -48,7 +47,6 @@ Add-ons extend the functionality of Kubernetes. Special listed Addons nare
 * Network Plugins
 
 ### How kubernetes work?
-
 Kubernetes ask us about the desired state of the application and Kubernetes being a controller fleet, a control loop that watches the state of our cluster, then make changes to move the current state closer to the desired state.
 
 <img src="../images/control_loop.png"  width="60%" height="30%"> 
@@ -93,6 +91,7 @@ spec:
         - containerPort: 80
 
 ```
+
 ### What is the difference between "record of intent" and "manifest"?
 `manifest` are collection of files, where `record of intent` is declared.
 
@@ -168,7 +167,8 @@ Objects are used to create the resources of desired state for running applicatio
 Applications running in kubernetes are called workloads.
 
 ### How Kubernetes isolates Kubernetes process with applicaton process?
-Kubernetes uses `namespaces` provide a mechanism for isolating Kubernetes process with applicaton process. The `namespaces` provide a mechanism for isolating groups of resources within a cluster. Kubernetes creates below namespaces for the Kubernets operations
+Kubernetes uses `namespaces` provide a mechanism for isolating Kubernetes process with applicaton process. The `namespaces` provide a mechanism for isolating groups of resources within a cluster. Kubernetes creates below namespaces for the Kubernets operations.
+
 * default                       
 * kube-public            
 * kube-system            
