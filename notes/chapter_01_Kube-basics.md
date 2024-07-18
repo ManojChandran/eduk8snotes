@@ -103,7 +103,7 @@ Kubernetes does not store the manifest files themselves, but it stores the state
 Kubernetes stores the serialized state of objects by writing them into etcd.
 
 ### What is an etcd?
-etcd is an open source distributed key-value store used to hold and manage the critical information that distributed systems need to keep running.
+`etcd` is an open source distributed key-value store used to hold and manage the critical information that distributed systems need to keep running.
 
 * Replicated
 * Consistent
