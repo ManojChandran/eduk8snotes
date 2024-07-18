@@ -1,6 +1,9 @@
 # Introduction 
 Last chapter we gone have through the kubernetes basics, now lets try to deep dive into kubernets architecture.
 
+### What are application running in kubernetes called?
+Application running in kubernetes are called `workloads`.
+
 ### Where does the `workloads` run in Kubenetes?
 Workloads run in POD's.
 
