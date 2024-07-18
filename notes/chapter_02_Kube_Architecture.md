@@ -1,11 +1,11 @@
 # Introduction 
-Last chapter we gone through the kubernetes basics, now time to deep dive kubernets does this for us.
+Last chapter we gone have through the kubernetes basics, now lets try to deep dive into kubernets architecture.
 
-### Where does the kubernets run the container?
-Containers are run in POD's.
+### Where does the `workloads` run in Kubenetes?
+Workloads run in POD's.
 
 ### What is a POD?
-A Pod is similar to a set of containers with shared namespaces and shared filesystem volumes. Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.
+Pods are the smallest deployable units of computing that you can create and manage in Kubernetes. They are similar to a set of containers with shared namespaces and shared filesystem volumes.
 
 ### Which OS does POD have?
 Kubernetes supports two operating system for POD, linux and windows. `.spec.os.name` field indicate the OS on which you want the pod to run. 
@@ -37,3 +37,5 @@ Kubelet is in charge of executing pod requirements, managing resources, and guar
 A cluster is a set of nodes (physical or virtual machines) running Kubernetes agents, managed by the control plane.
 
 <img src="../images/Kubernetes_cluster_block.png"  width="60%" height="30%"> 
+
+## Conclusion
