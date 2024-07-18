@@ -1,6 +1,38 @@
 # Introduction 
 Last chapter we gone have through the kubernetes basics, now lets try to deep dive into kubernets architecture.
 
+### Where is containeriszed application hosted?
+Contanerized applications are hosted in kubernetes clusters.
+
+### What is a Kubernetes Cluster?
+A Kubernetes cluster is a set of nodes that run containerized applications managed by Kubernetes. It consists of at least one master node (control plane) and multiple worker nodes where the actual applications run. The master node is responsible for managing the cluster, while the worker nodes are where the applications and services are deployed and run.
+
+<img src="../images/Kubernetes_cluster_architecture.png"  width="60%" height="30%">
+
+### What are the major components of Kubernetes cluster?
+Kubernetes components are classified as Control plane compoanents and Node components.
+
+Control plane components consists of
+* kube-apiserver
+* etcd
+* kube-scheduler
+* kube-controller-manager
+* cloud-controller-manager
+
+Node Components consist of
+* kubelet
+* kube-proxy
+* Container runtime
+
+### What are Addons in kubernetes?
+Add-ons extend the functionality of Kubernetes. Special listed Addons nare
+
+* DNS
+* Web UI (Dashboard)
+* Container Resource Monitoring
+* Cluster-level Logging
+* Network Plugins
+
 ### What are application running in kubernetes called?
 Application running in kubernetes are called `workloads`.
 
@@ -36,9 +68,5 @@ The kubelet is the primary "node agent" that runs on each node. It can register 
 ### What are the primary objectives of Kubelet?
 Kubelet is in charge of executing pod requirements, managing resources, and guaranteeing cluster health.
 
-### What is a cluster in kubernetes?
-A cluster is a set of nodes (physical or virtual machines) running Kubernetes agents, managed by the control plane.
-
-<img src="../images/Kubernetes_cluster_block.png"  width="60%" height="30%"> 
-
 ## Conclusion
+We covered the basic Kubernetes architecture and understood where our applications are actually running.

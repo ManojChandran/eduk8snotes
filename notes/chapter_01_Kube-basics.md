@@ -14,38 +14,6 @@ So, "K" + 8 characters + "s" becomes "K8s".
 
 This form of abbreviation is known as "numeronym," where numbers are used to simplify the representation of long words. It's a shorthand way to reference Kubernetes in written communication, making it quicker to write and easier to recognize.
 
-### Where is this containeriszed application hosted?
-Contanerized applications are hosted in kubernetes clusters.
-
-### What is a Kubernetes Cluster?
-A Kubernetes cluster is a set of nodes that run containerized applications managed by Kubernetes. It consists of at least one master node (control plane) and multiple worker nodes where the actual applications run. The master node is responsible for managing the cluster, while the worker nodes are where the applications and services are deployed and run.
-
-<img src="../images/Kubernetes_cluster_architecture.png"  width="60%" height="30%">
-
-### What are the major components of Kubernetes cluster?
-Kubernetes components are classified as Control plane compoanents and Node components.
-
-Control plane components consists of
-* kube-apiserver
-* etcd
-* kube-scheduler
-* kube-controller-manager
-* cloud-controller-manager
-
-Node Components consist of
-* kubelet
-* kube-proxy
-* Container runtime
-
-### What are Addons in kubernetes?
-Add-ons extend the functionality of Kubernetes. Special listed Addons nare
-
-* DNS
-* Web UI (Dashboard)
-* Container Resource Monitoring
-* Cluster-level Logging
-* Network Plugins
-
 ### How kubernetes work?
 Kubernetes ask us about the desired state of the application and Kubernetes being a controller fleet, a control loop that watches the state of our cluster, then make changes to move the current state closer to the desired state.
 
