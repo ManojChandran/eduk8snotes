@@ -55,12 +55,22 @@ Kubernetes ask us about the desired state of the application and Kubernetes bein
 
 ### How we let kubernetes know, what state we want?
 
-By using a "record of intent", it refers to the declarative approach used to manage the desired state of the cluster. Users describe the desired state of resources (such as Pods, Deployments, Services, etc.) using manifests, typically written in YAML or JSON.
+Kubernetees understand what state we want from the objects created. 
 
-### How Kubernetes uses "record of intent"?
-"Record of intent" is consumed by Kubernentes API server to create objects. Kubernetes objects are persistent entities in the Kubernetes system and it is used to represent the state of our cluster.
+### What is an Object?
+Kubernetes objects are persistent entities in the Kubernetes system and it is used to represent the state of our cluster.
+Each Object has a Object `spec` (describe desired state) and Object `status` (describes current state).
 
-### Give a sample "record of intent"?
+### How these Objects are created?
+Objects are created based on the `record of intent` provided.
+
+### How `record of intent` is created?
+By using `manifest` file we declare our `record of intent` to create an object.
+
+### What is a manifest?
+A "manifest" is a specific file or set of files (typically written in YAML or JSON) that users create to declare the desired state of a Kubernetes resource.
+
+### Give a sample `manifest` file?
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -83,11 +93,8 @@ spec:
         - containerPort: 80
 
 ```
-### What is a manifest?
-A "manifest" is a specific file or set of files (typically written in YAML or JSON) that users create to declare the desired state of a Kubernetes resource.
-
 ### What is the difference between "record of intent" and "manifest"?
-Manifest are collection of files, where "record of intent" is declared.
+`manifest` are collection of files, where `record of intent` is declared.
 
 ### Does kubernetes stores the manifest files?
 Kubernetes does not store the manifest files themselves, but it stores the state information represented by those manifests. When you submit a manifest to the Kubernetes API server, the desired state defined in the manifest is processed and stored in etcd, the distributed key-value store used by Kubernetes for all its data.
