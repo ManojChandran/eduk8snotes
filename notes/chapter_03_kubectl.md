@@ -8,6 +8,7 @@ The Kubernetes command-line tool, kubectl, allows you to run commands against Ku
 ```
 kubectl version
 ```
+
 ### How do you connect to an external Kubernetes cluster?
 First we need to fins out the necessary information such as API server URL, authentication credentials, and context settings. `kubeconfig` file contains this information and we need to get it forom the Kubernetes cluster admin. Then we set the context to use the external kubernetes cluster. 
 
@@ -45,16 +46,19 @@ Delete a context
 ```
 kubectl config delete <context-name>
 ```
+
 ### How to find the kubeconfig file location?
 We can use the following kubectl command to verfy the config file path.
 ```
 kubectl config view -o jsonpath='{.paths[*]}'
 ``` 
+
 ### How to get basic cluster information?
 To know the endpoint information about the master and services in the cluster.
 ```
 kubectl cluster-info
 ```
+
 ## Conclusion
 We learned the basic commands and understood how to connect kubernetes clusters.
 
