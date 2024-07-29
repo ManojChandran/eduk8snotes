@@ -68,6 +68,12 @@ Add-ons extend the functionality of Kubernetes. Special listed Addons nare
 * Cluster-level Logging
 * Network Plugins
 
+### How to communicate with the kubernetes control plane?
+Kubernetes provides a command line tool named 'kubectl' for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+
+### What is kubectl?
+The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters.
+
 ### What is the biggest challenge in managing individual pods?
 Our workloads run on a container in POD and when POD fails we need to get it back for the workload. Managing individual PODS like this will be challenging, kubernets solves this by `workload objects`.
 
