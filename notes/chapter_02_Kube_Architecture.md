@@ -19,6 +19,12 @@ Pods run on the NODES of the cluster.
 ### Who manages the NODES?
 Each NODES are manged by Control plane.
 
+### How nodes are identified?
+Every `node` is idetenfied with a unique name, two nodes cannot have same name at the same time.
+
+### Why two nodes cannot have same name at the same time?
+Because, Kubernetes assumes that a resource with the same name is the same `object`.
+
 ### What is a control plane?
 The container orchestration layer that exposes the API and interfaces to define, deploy, and manage the lifecycle of containers.
 
