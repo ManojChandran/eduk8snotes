@@ -59,6 +59,7 @@ spec:
         - containerPort: 80
 
 ```
+> If you don't undertsnd the yaml, Don't panic. We will deal with it in detail.
 
 ### What is the difference between "record of intent" and "manifest"?
 `manifest` are collection of files, where `record of intent` is declared.
@@ -80,7 +81,10 @@ Kubernetes stores the serialized state of objects by writing them into etcd.
 
 Kubernetes etcd stores state data, configuration data and meta data. `etcd` has a wait frunction which continiously monitor config and state, will notify kubernetes when there is a difference.
 
-### What are the different Object Kinds, kubernetes understand?
+### How kubernetes Identifies the Objects?
+Each object in your cluster has a `UID`, that is unique across our whole cluster and recognize these as resources of certain `kind` which kubernetes understand.
+
+### What are the different `object` Kinds, kubernetes understand?
 * Pods
 * Replica Sets
 * Services
@@ -90,11 +94,11 @@ Kubernetes etcd stores state data, configuration data and meta data. `etcd` has 
 * Stateful Sets
 * Daemon Sets
 
-### How kubernetes Identifies the Objects?
-Each object in your cluster has a Name that is unique for that type of resource. Every Kubernetes object also has a UID that is unique across your whole cluster.
+### What do you mean by Resource in Kubernetes?
+A Resource is an endpoint in the Kubernetes API that stores a collection of API objects of a certain kind.
 
 ### How can we identify the Objects?
-Each object in your cluster has a Name that is unique for that type of resource. Every Kubernetes object also has a UID that is unique across your whole cluster. (eg name: nginx-demo )
+We can give `name`  that is unique for that type of resource. ( eg name: nginx-demo )
 
 ```yaml
 apiVersion: v1
@@ -109,37 +113,8 @@ spec:
     - containerPort: 80
 ```
 
-### How can we group these Objects and refer when needed?
-We use labels and selectors to group name them and refer them as group. Labels - they are key/value pairs that are attached to objects such as Pods.
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: label-demo
-  labels:
-    environment: production
-    app: nginx
-spec:
-  containers:
-  - name: nginx
-    image: nginx:1.14.2
-    ports:
-    - containerPort: 80
-```
-
 ### What are these kubernetes Objects used for?
-Objects are used to create the resources of desired state for running application in kubernetes. Resources are the fundemental building blocks of kubernentes, and they describe the various entities that make up a kubernetes application and infrastructure.
-
-### What are applications running in kubernetes called?
-Applications running in kubernetes are called workloads.
-
-### How Kubernetes isolates Kubernetes process with applicaton process?
-Kubernetes uses `namespaces` provide a mechanism for isolating Kubernetes process with applicaton process. The `namespaces` provide a mechanism for isolating groups of resources within a cluster. Kubernetes creates below namespaces for the Kubernets operations.
-
-* default                       
-* kube-public            
-* kube-system            
+The `objects` are used to create the resources of desired state for running application in kubernetes. Resources are the fundemental building blocks of kubernentes, and they describe the various entities that make up a kubernetes application and infrastructure.
 
 ## Conclusion
-We coverd the basics of kubernetes and major components of kubernetes.
+We coverd the kubernetes basic concepts like `control loop` and `object` on which kubernetes is build upon.
