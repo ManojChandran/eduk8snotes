@@ -1,5 +1,5 @@
 # Introduction 
-Last chapter we gone have through the kubernetes basics, now lets try to deep dive into kubernets architecture.
+Last chapter we gone have through the kubernetes basics concept, now lets try to deep dive into kubernets architecture.
 
 ### What are application running in kubernetes called?
 Application running in kubernetes are called `workloads`.
@@ -74,25 +74,19 @@ Add-ons extend the functionality of Kubernetes. Special listed Addons nare
 * Cluster-level Logging
 * Network Plugins
 
-### How to communicate with the kubernetes control plane?
-Kubernetes provides a command line tool named 'kubectl' for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+### How Kubernetes isolates its process with applicaton process?
+The `namespaces` provide a mechanism for isolating groups of resources within a cluster, Kubernetes uses `namespaces` as a mechanism for isolating Kubernetes process with applicaton process. Kubernetes creates below namespaces for the Kubernets operations.
 
-### What is kubectl?
-The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters.
+* default                       
+* kube-public            
+* kube-system
+* kube-node-lease 
 
-### What is the biggest challenge in managing individual pods?
-Our workloads run on a container in POD and when POD fails we need to get it back for the workload. Managing individual PODS like this will be challenging, kubernets solves this by `workload objects`.
+### What are these `namespaces` used for?
+* default : Default namespace assocaited to any user defined resources, which didn't mention a namespace specifically.
+* kube-node-lease : Specifically alloted for process and resources, which deals with health of the nodes.(sending heatbeats)
+* kube-public : Handling publicaly accessible data like cluster info, which is availabel without authentication.
+* kube-system : The namespace for objects created by the Kubernetes system.
 
-### What is a `workload objects`?
-A `workload object` that represents a higher abstraction level than a Pod, and then the Kubernetes control plane automatically manages Pod objects on our behalf, based on the specification for the `workload object` we defined.
-> Kubernetes provide built in API to create `workload object`.
-
-### What are the different `workload objects` available in Kubernetes?
-* Deployments
-* StatefulSet
-* DaemonSet
-* Job
-
-### 
 ## Conclusion
 We covered the basic Kubernetes architecture and understood where our applications are actually running.
