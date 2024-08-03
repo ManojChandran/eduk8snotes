@@ -1,7 +1,7 @@
 # Introduction 
 Last chapter we learned about Kubernetes architecture and learned about PODS, now lets learn about how PODS get scheduled in the nodes.
 
-### Who schedules the PODS in kubernetes cluster?
+### Who schedules the PODS in kubernetes nodes?
 Kube-scheduler selects an optimal node to run newly created or not yet scheduled (unscheduled) pods. It is the default scheduler for Kubernetes and runs as part of the control plane.
 
 ### What is the node called, when it meets the scheduling requirements?
