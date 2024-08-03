@@ -218,4 +218,3 @@ kubectl logs --previous <pod_name>
 
 ## Conclusion
 We learned the basic commands and understood how to connect kubernetes clusters.
-
