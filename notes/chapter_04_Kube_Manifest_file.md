@@ -49,6 +49,55 @@ kubectl apply -f nginx_demo.yml
 kubectl apply --dry-run=client -f nginx_demo.yml -o yaml
 ```
 
+### What is metadata used for?
+metadata: Provides metadata about the object, including its name, namespace, labels, and annotations.
+
+### How labels in meta data help?
+The `labels` in metadata help to define key value pair attached to kubernetes `objects`. They are used to organize, categorize, and select subsets of objects.
+
+> It creates a reference point for other manifest files to refer this object. It work in combination `labels` and `selectors`.
+
+Example for label
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+```
+Example for Selector refering label
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: web
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+```
+
+### How to add a comment in the manifest file?
+Use "#" to add comment in manifest file.
+```yaml
+# This deployment creates 3 replicas of the nginx container
+```
 
 ## Conclusion
-We learned how to create manifest file and apply them.
+We learned how to create manifest file, apply them to create object and refer them using selectors.
