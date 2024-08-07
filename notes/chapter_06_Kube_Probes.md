@@ -84,6 +84,7 @@ spec:
       initialDelaySeconds: 5
       periodSeconds: 5
 ```
+> You can replace "readinessProbe" with "startupProbe" or "livenessProbe", template will be valid
 
 ### What are the major components of liveness probe?
 * initialDelaySeconds: Time to wait before performing the first probe after the container has started.
