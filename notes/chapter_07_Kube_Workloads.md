@@ -15,9 +15,9 @@ A workload object that represents a higher abstraction level than a Pod, and the
 Kubernetes provide built in API to create workload object.
 
 ### What are the different workload objects available in Kubernetes?
-* DaemonSet
-* StatefulSet
 * Deployments
+* StatefulSet
+* DaemonSet
 * Job
 * CornJob
 
