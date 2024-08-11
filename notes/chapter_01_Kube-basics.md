@@ -4,6 +4,13 @@ This chapter is an introduction to kubernetes and we understand the basics of Ku
 ### What is a kubernentes?
 Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
 
+### What are the Kubernetes capabilities?
+* Automated Deployment, Scaling, and Management of Applications
+* Service Discovery and Load Balancing
+* Container Orchestration
+* Persistent Storage Management
+* Configuration and Secrets Management
+
 ### Why Kubernetes are called k8's?
 Kubernetes is often abbreviated as "K8s" because of a common practice in the tech community to shorten long words by replacing the middle characters with their count. In the case of Kubernetes, the abbreviation "K8s" comes from:
 
