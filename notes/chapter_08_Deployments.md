@@ -13,7 +13,21 @@ A `pod` is the smallest logical unit that we can deploy into a kubernetes cluste
 * Resource Management
 * Cross-Cluster Deployments
 
+### How deployment works?
+We describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate.
 
+### What is a deployment strategy?
+A deployment strategy is a way to change or upgrade an Kubernetes workloads (Application) with less downtime ever possible.
+
+### What are the different deployment strategies?
+* Rolling deployment
+* Recreate deployment
+* Ramped slow rollout
+* Best-effort controlled rollout
+* Blue/green deployment
+* Canary deployment
+* Shadow deployment
+* A/B testing
 
 ## Conclusion
 We covered the
