@@ -16,6 +16,12 @@ A `pod` is the smallest logical unit that we can deploy into a kubernetes cluste
 ### How deployment works?
 We describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate.
 
+### How do Deployments ensure application availability?
+Deployment Controller changes the actual state to the desired state at a controlled rate, making sure application highly available.
+
+### What are rolling updates in Kubernetes?
+A rolling update allows a Deployment update to take place with zero downtime. It does this by incrementally replacing the current Pods with new ones.
+
 ### What is a deployment strategy?
 A deployment strategy is a way to change or upgrade an Kubernetes workloads (Application) with less downtime ever possible.
 
@@ -28,6 +34,9 @@ A deployment strategy is a way to change or upgrade an Kubernetes workloads (App
 * Canary deployment
 * Shadow deployment
 * A/B testing
+
+### How does Kubernetes handle application rollbacks?
+Kubernetes handles application rollbacks by scaling down the replica set for the updated version and scaling up the replica set for the previous version. This redirects traffic back to the previous version of the application.
 
 ## Conclusion
 We covered the
