@@ -17,10 +17,32 @@ A `pod` is the smallest logical unit that we can deploy into a kubernetes cluste
 We describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate.
 
 ### How do Deployments ensure application availability?
-Deployment Controller changes the actual state to the desired state at a controlled rate, making sure application highly available.
+Deployment Controller changes the actual state to the desired state at a `controlled rate`, making sure application highly available.
 
-### What are rolling updates in Kubernetes?
-A rolling update allows a Deployment update to take place with zero downtime. It does this by incrementally replacing the current Pods with new ones.
+### Give a sample deployment manifest?
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+```
 
 ### What is a deployment strategy?
 A deployment strategy is a way to change or upgrade an Kubernetes workloads (Application) with less downtime ever possible.
@@ -34,6 +56,20 @@ A deployment strategy is a way to change or upgrade an Kubernetes workloads (App
 * Canary deployment
 * Shadow deployment
 * A/B testing
+
+### What is the default deployment strategy?
+A Rolling deployment is the default deployment strategy in kubernetes.
+
+### What is a `Rolling` deployment?
+
+### What is a `Recreate` deployment?
+### What is a `Blue-Green` deployment?
+### What is a `Canary` deployment?
+### What is a `A/B Testing` deployment?
+
+
+
+
 
 ### How does Kubernetes handle application rollbacks?
 Kubernetes handles application rollbacks by scaling down the replica set for the updated version and scaling up the replica set for the previous version. This redirects traffic back to the previous version of the application.
