@@ -27,11 +27,36 @@ When a pod that is managed by a ReplicaSet is manually deleted, the ReplicaSet w
 
 ### How can we set up a ReplicaSet to run in a specific namespace?
 * We can specify the namespace in the metadata section of the ReplicaSet manifest file.
-*Alternatively, use the --namespace flag with kubectl apply to deploy the ReplicaSet to a specific namespace.You can set a default namespace for your current kubectl context to avoid repeatedly specifying the namespace.
+* Alternatively, use the --namespace flag with kubectl apply to deploy the ReplicaSet to a specific namespace.
+* We can set a default namespace for your current kubectl context to avoid repeatedly specifying the namespace.
+
+Example:
+```YAML
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-replicaset
+  namespace: my-namespace  # Specify the namespace here
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+```
+```
+kubectl apply -f replicaset.yaml --namespace=my-namespace
+```
 
 ### What is the difference between ReplicaSet and ReplicationController?
 ReplicaSets support set-based label selectors, whereas ReplicationControllers only support equality-based selectors.
-
 > Kubernetes official recommendation: A Deployment that configures a ReplicaSet is now the recommended way to set up replication.
 
 ### How can we view the status of a ReplicaSet?
