@@ -20,6 +20,7 @@ ReplicaSet doesn't directly decide which node a pod should be scheduled on. The 
 
 ### How Labels and Selectors Work Together in a ReplicaSet?
 Labels on Pods: When you define a ReplicaSet, you specify a pod template that includes labels. These labels are automatically applied to any pod created by the ReplicaSet.
+
 Selectors in ReplicaSet: The selector in the ReplicaSet's spec matches these labels. The ReplicaSet then manages any pods that match this selector, ensuring that the specified number of replicas is always running.
   
 ### What happens to a ReplicaSet when its Pods are manually deleted?
