@@ -66,4 +66,4 @@ kubectl get replicaset [replicaset-name] -n [namespace]
 ```
 
 ## Conclusion
-We covered the
+We covered the ReplicaSet kind, which is a basic method for making sure the application availability. It make sure a correct number of replicas of application pods are there to serve.
