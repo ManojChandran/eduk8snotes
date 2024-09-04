@@ -110,5 +110,8 @@ The `preferredDuringSchedulingIgnoredDuringExecution` provides guidelines for th
 
 * taints and tolerance :
 
+### What is a POD Distruption Budget?
+PDB is a Kubernetes resource that specifies the minimum number or percentage of POD's that must be available during voluntary disruptions, such as node upgrades, manual scaling, or change in Deployment or StatefulSet.
+
 ## Conclusion
 We learned about the POD scheduling process and methods availble.
