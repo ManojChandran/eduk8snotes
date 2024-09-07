@@ -43,7 +43,25 @@ spec:
         ports:
         - containerPort: 80
 ```
-
+### Give me the basic deployment commands?
+```
+kubectl create -f deployment-def.yml
+```
+```
+kubectl get deployments
+```
+```
+kubectl apply -f deployment-def.yml
+```
+```
+kubectl rollout status deployment/myapp-deployment
+```
+```
+kubectl rollout history deployment/myapp-deployment
+```
+```
+kubectl rollout undo deployment/myapp-deployment
+```
 ### What is a deployment strategy?
 A deployment strategy is a way to change or upgrade an Kubernetes workloads (Application) with less downtime ever possible.
 
@@ -61,15 +79,32 @@ A deployment strategy is a way to change or upgrade an Kubernetes workloads (App
 A Rolling deployment is the default deployment strategy in kubernetes.
 
 ### What is a `Rolling` deployment?
+The Rolling deployment is the default strategy that allow, one by one replacement of old version of the application with new version.
+
+### How we can control the Rolling deployment?
+Rolling deployment can be controlled by two optional prameters in manifest file, `maxSurge` and `maxUnavialable`.
+* MaxSurge specifies the maximum number of pods the Deployment is allowed to create at one time.
+* MaxUnavailable specifies the maximum number of pods that are allowed to be unavailable during the rollout.
+
+```yaml
+spec:
+  replicas: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 1
+```
 
 ### What is a `Recreate` deployment?
+Recreate deployment is a strategy that recreates and replaces old application with new one instantly. It has potential downtime.
+
 ### What is a `Blue-Green` deployment?
+A blue-green deployment involves deploying an entire new application with new version side by side and re-routing traffic from old version to the new applicaton version, once the application is UP.
+
 ### What is a `Canary` deployment?
+Canary deployment strategy uses deployments in subsets, new application versions are released to a small number of test users.
 ### What is a `A/B Testing` deployment?
-
-
-
-
 
 ### How does Kubernetes handle application rollbacks?
 Kubernetes handles application rollbacks by scaling down the replica set for the updated version and scaling up the replica set for the previous version. This redirects traffic back to the previous version of the application.
