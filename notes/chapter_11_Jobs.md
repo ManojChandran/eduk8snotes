@@ -1,13 +1,16 @@
 # Introduction 
-Last chapter we discussed about the workload and workload managements objects, we will learn in deatil each of the workload management objects.
+Last chapter we discussed about the workload managements object `daemonSet`. In this chapter,  we will learn in detail on  workload `JOBs` management object.
 
 ### What are JOBs in Kubernetes?
+A Kubernetes Job is a resource object that ensures a specified number of pods successfully complete a particular task. Unlike Deployments, which are designed to keep applications running indefinitely, Jobs are intended for tasks that have a clear start and end.
+
 ### What are the types of JOBs in Kubernetes?
-### What Happens When a Kubernetes Job Fails?
+
+### What Happens when a Kubernetes Job Fails?
 ### How to Re-run a Kubernetes Job?
 ### What are the things to Check Before Re-running a failed Job?
 ### How to check the JOB status?
 
 
 ## Conclusion
-We covered the
+We covered the kubernetes JOB's, as part of the work load management.
