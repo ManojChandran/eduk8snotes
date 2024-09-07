@@ -1,5 +1,5 @@
 # Introduction 
-Last chapter we discussed about the workload and workload managements objects, we will learn in deatil each of the workload management objects.
+Last chapter we discussed about the `ReplicaSet`, an important concept in workload managements objects. This chapter we will learn in detail on the workload management object `Deployment`.
 
 ### What is a deployment?
 A Kubernete `deployment` provides declarative updates for Pods and ReplicaSets.
@@ -104,10 +104,9 @@ A blue-green deployment involves deploying an entire new application with new ve
 
 ### What is a `Canary` deployment?
 Canary deployment strategy uses deployments in subsets, new application versions are released to a small number of test users.
-### What is a `A/B Testing` deployment?
 
 ### How does Kubernetes handle application rollbacks?
 Kubernetes handles application rollbacks by scaling down the replica set for the updated version and scaling up the replica set for the previous version. This redirects traffic back to the previous version of the application.
 
 ## Conclusion
-We covered the
+We covered the kubernetes Deployment and Deployment strategies, as part of the work load management.
