@@ -57,10 +57,53 @@ Yes, Kubernetes retry automatically by restarting the failed JOB. We can restric
 ### How to clean up finished JOB?
 We can configure a Job or CronJob to automatically delete its finished Jobs by setting the `.spec.ttlSecondsAfterFinished` field.
 
-### What Happens when a Kubernetes Job Fails?
-### What are the things to Check Before Re-running a failed Job?
 ### How to check the JOB status?
+To check the status of a Kubernetes Job, we can use kubectl commands. Here are a few ways to check the status of a Job:
+* get command
+```
+$ kubectl get jobs
+NAME             COMPLETIONS   DURATION   AGE
+demo-job      1/1           15s        1m
+data-backup      0/3           2m         5m
+$ kubectl get pods --selector=job-name=demo-job
+NAME                     READY   STATUS      RESTARTS   AGE
+demo-job-abcdef       0/1     Completed   0          30s
+demo-job-ghijk        0/1     Failed      0          25s
 
+```
+* describe commad
+```
+kubectl describe job demo-job
+
+```
+* logs command
+```
+kubectl logs example-job-abcdef
+```
+
+### Can we schedule the JOB?
+Yes, we can schedule the JOB on a regular basis using Kubernetes `cronjob`.
+```yaml
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: demo
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: demo
+            image: busybox:1.28
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - date; echo Kubernetes CronJOB
+          restartPolicy: OnFailure
+```
 
 ## Conclusion
 We covered the kubernetes JOB's, as part of the work load management.
