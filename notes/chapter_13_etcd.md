@@ -90,4 +90,4 @@ etcdutl --data-dir <data-dir-location> snapshot restore snapshot.db
 ### How would you upgrade etcd in a production Kubernetes cluster?
 
 ## Conclusion
-We covered the kubernetes JOB's, as part of the work load management.
+We covered the kubernetes etcd introduction and its basic.
