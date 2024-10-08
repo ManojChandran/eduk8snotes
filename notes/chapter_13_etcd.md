@@ -102,11 +102,10 @@ To secure etcd, a distributed key-value store often used in Kubernetes clusters,
 ```
 etcdctl snapshot save /path/to/backup.db
 ```
-### What are the typical ways to monitor etcd in a Kubernetes cluster?
 ### What are etcd leases, and how are they used in Kubernetes?
+Leases are used to manage temporary resources in etcd, such as session tokens or temporary storage. It is used to set time-to-live (TTL) for the keys.
 
-### How do you verify data integrity in etcd after a backup or restore?
-### How would you upgrade etcd in a production Kubernetes cluster?
+> Leases provide a mechanism to lock shared resorces and coordinate activity between the members of a set.
 
 ## Conclusion
 We covered the kubernetes etcd introduction and its basic.
