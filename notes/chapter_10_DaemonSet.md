@@ -13,6 +13,7 @@ DaemonSet is a kind of deployment, where it mandate Nodes to run a particular PO
 No, DaemonSets cannot be scaled manually like Deployments or ReplicaSets. The number of Pods in a DaemonSet is directly proportional to the number of nodes in the cluster. 
 
 ### How can you ensure that DaemonSet Pods are scheduled after all other system components have started?
+The order in which POD's are scheduled can be ensured by using custom `PriorityClass`. We can use the same to ensure the DaemonSet Pods are scheduled after all other system components are started, We can do it by, defining a PriorityClass for the system components as high and DaemonSet Pods with a lower priority. By assigning this priority class to our DaemonSet Pods in the DaemonSet manifest, we can make sure sure DaemonSet Pods are scheduled after system components.
 
 ### What is a Priviliged DaemonSet in kubernetes?
 A Privileged DaemonSet is a type of DaemonSet where the pods it manages run in "privileged" mode. In Kubernetes, a privileged pod has elevated permissions on the host system, similar to the root user on a Linux machine. This elevated permission allows the pod to perform a wide range of system-level operations that are typically restricted.
