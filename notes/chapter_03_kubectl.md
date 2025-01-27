@@ -48,11 +48,11 @@ First we need to fins out the necessary information such as API server URL, auth
 * Data needed in order to authenticate, such as tokens or client certificates
 
 ### What is context in Kubernetes?
-A context is a combination of three main elements:
-`Cluster`: The specific Kubernetes cluster you want to connect to.
-`User`: The user account with credentials to authenticate to the Kubernetes cluster.
-`Namespace`: The default namespace that kubectl commands will operate in if no namespace is specified in the command.
-`Authentication`: Methods and certicate details.
+A context is a combination of fours main elements:
+`Cluster`: The specific Kubernetes cluster you want to connect to. </br>
+`User`: The user account with credentials to authenticate to the Kubernetes cluster.</br>
+`Namespace`: The default namespace that kubectl commands will operate in if no namespace is specified in the command.</br>
+`Authentication`: Methods and certicate details.</br>
 
 ### How to create a kubeconfig?
 Set the cluster information
