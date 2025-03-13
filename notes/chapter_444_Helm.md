@@ -21,6 +21,7 @@ Helm charts provides a higher level of abstraction, minimizing the learning curv
 * It makes application deployement easy
 * It standardize deployemnt and make it reuseable
 * Improves developer productivity
+* It reduces deployment complexity
 
 ### How does Helm communicate with kubernetes?
 Helm client and library are written in go programming language, the library uses the kubernetes client library to communicate with kubernetes.
