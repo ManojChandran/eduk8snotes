@@ -56,9 +56,11 @@ hel uninstall <release-name>
 ```
 #### Inspecting & Debugging 
 ```
-helm status<release-name>
+helm status <release-name>
 helm history <release-name>
 helm get all <release-name>
+helm install <relase-name> --debug <chart>
+helm install <relase-name> --dry-run <chart>
 helm template <chart>
 helm lint <chart>
 ```
