@@ -68,7 +68,7 @@ helm lint <chart>
 #### Customizing Deployemnts
 ```
 helm install <relase-name> <chart> --set key=value
-helm install <relase-name> <chart> -f values.yaml
+helm install <relase-name> <chart> -f myvalues.yaml
 ```
 
 #### Repository management
