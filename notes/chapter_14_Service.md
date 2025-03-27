@@ -66,7 +66,7 @@ kubectl get endpoints my-service
 ### What happens if a Pod fails? Will the Service automatically update its endpoints?
 Yes, Kubernetes Services automatically update their endpoints when a Pod fails. The Service continuously monitors the availability of Pods and ensures traffic is only routed to healthy Pods.
 
-### Can a Service span multiple namespaces? How can you achieve cross-namespace service discovery?
+### Can a Service span multiple namespaces? How can we achieve cross-namespace service discovery?
 No, a Kubernetes Service is limited to a single namespace by default. It can only discover and route traffic to Pods within the same namespace.
 
 However, cross-namespace service discovery can be achieved using external services, `DNS resolution`, or `ServiceExport` (in multi-cluster setups).
@@ -82,12 +82,22 @@ Before Kubernetes 1.17, Kubernetes used the Endpoints (v1.Endpoints) API to stor
 kubectl get endpointslice -n kube-system
 ```
 ### Can we apply Network policy on the service we create?
-No, Network Policies in Kubernetes are applied to Pods, not directly to Services. However, since Services route traffic to Pods, you can control which Pods can receive or send traffic by applying Network Policies.
+No, Network Policies in Kubernetes are applied to Pods, not directly to Services. However, since Services route traffic to Pods, we can control which Pods can receive or send traffic by applying Network Policies.
 
 ### Why Can’t We Apply a Network Policy to a Service?
 * A Service is just an abstraction that provides a stable IP and DNS name for a group of Pods.
 * Network Policies apply at the Pod level, using labels to select Pods.
 * The Service itself does not handle traffic; kube-proxy routes requests to the actual Pods.
 
+### How do you check the IP address assigned to a Service?
+1. Find Selected Pods Using Label Matching
+```sh
+kubectl get pods -l app=my-app
+```
+2. Check Endpoints Manually
+```sh
+kubectl get endpoints my-service -o yaml
+```
+
 ## Conclusion
-We 
+We covered the kubernetes `service` introduction and its basic.
